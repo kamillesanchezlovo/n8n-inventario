@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventario IDEEM</title>
+    <link rel="stylesheet" href="/styles/global.css" />
+</head>
+
+<body class="inventario-body">
+    <main class="inventario-page">
+        <header class="inventario-header">
+            <h1>Inventario General</h1>
+            <button type="button" class="btn-logout" onclick="logout()">
+                Cerrar sesion
+            </button>
+        </header>
+
+        <section class="acciones-panel" aria-label="Acciones de inventario">
+            <div class="acciones-grupo">
+                <h2>Navegacion</h2>
+                <div class="acciones-grid">
+                    <a href="/inventario-gondolas.html" class="btn-opcion">Actualizar gondolas</a>
+                </div>
+            </div>
+
+            <div class="acciones-grupo">
+                <h2>Movimientos</h2>
+                <div class="acciones-grid">
+                    <a href="/inventario-actualizar.html?modo=agregar" class="btn-opcion">Agregar existencias</a>
+                    <a href="/inventario-actualizar.html?modo=reducir" class="btn-opcion">Reducir existencias</a>
+                    <a href="/inventario-actualizar.html?modo=trasladar" class="btn-opcion">Trasladar existencias</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="inventario-card" aria-label="Tabla de inventario">
+            <div class="table-wrap">
+                <table class="inventario-table">
+                    <thead>
+                        <tr>
+                            <th>Nombre del articulo</th>
+                            <th>Tipo</th>
+                            <th>Descripcion</th>
+                            <th>Color</th>
+                            <th>Unidad de medida</th>
+                            <th>Cantidad</th>
+                            <th>Cantidad unitaria</th>
+                            <th>Gondola actual</th>
+                            <th>Observaciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="inventarioTableBody"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <script src="/scripts/otros.js"></script>
+</body>
+
+</html>
